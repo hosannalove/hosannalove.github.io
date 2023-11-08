@@ -1,19 +1,23 @@
 <!-- 
 필수로 있어야 하는 항목
 1. 학교 소개
-1.1 학교 특징 - 한국인 선생님들 많다. 봉사자들 많다 등
-1.2 학교 위치
-2. 학교 연혁
-3. 교장선생님 소개(?)
-4. 연락하는 방법, 후원 방법 등(현재 학교 옮길 예정이라고 소개)
-5. 게시판
+1-1. 학교 역사
+2. 교사 및 직원 정보
+2-1. 학교 시설 및 자원
+2-2. 학교 수업 정보
+2-3. 연락처 및 위치
+3. 입학 및 등록
+4. 게시판(공지사항)
+4-1. 학교 활동(사진)
+5. 후원
 -->
 
 <!-- 
-있으면 좋을 것 같은 항목들
+있으면 좋을 것 같은 항목들 > 진짜 개어려울듯
 1. 로그인 기능(관리자 모드)
 2. 게시글 작성모드(Database, cloud)
 3. 한 영 기능 : 한글, 영어 모드 설정
+4. 검색 기능
 
 -->
 <!-- 
@@ -32,7 +36,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +73,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
-                                    <h1 class="display-1 text-light mb-5 animated slideInDown">Hosanna school</h1>
+                                    <h1 class="display-1 text-light mb-5 animated slideInDown">하나님이 세우신 호산나학교</h1>
                                     <a href="" class="btn btn-success py-sm-3 px-sm-5">hosanna good1</a>
                                     <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">hosanna good2</a>
                                 </div>
@@ -83,7 +87,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
-                                    <h1 class="display-1 text-light mb-5 animated slideInDown">Hosanna school</h1>
+                                    <h1 class="display-1 text-light mb-5 animated slideInDown">기독교 진리로 수업하는 호산나학교</h1>
                                     <a href="" class="btn btn-success py-sm-3 px-sm-5">hosanna good1</a>
                                     <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">hosanna good2</a>
                                 </div>
@@ -119,20 +123,20 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
                         <h1 class="text-success display-6 mb-4">호산나 학교는 하나님께서 캄보디아 학생들을 위해 세운 학교입니다</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p>2001년, 하나님께서는 정순영 선교사님을 통해 호산나 학교를 설립하였습니다. 호산나학교는 캄보디아 이 땅에 하나님께서 캄보디아에 있는 학생들의 질 높은 교육을 받을 수 있게 꾸준히 노력하고 있습니다. </p>
+                        <p class="mb-4">지금까지 수많은 선교단체들과 학교에서 받은 후원 덕분에 지금까지 학교의 명맥을 이어가고 있습니다. 지금까지도 호산나 학교는 캄보디아 학생들에게 희망찬 미래를 실현해주어 수많은 인재들을 배출하였습니다. </p>
                         <div class="row g-2 mb-4 pb-2">
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-success me-2"></i>Fully Licensed
+                                <i class="fa fa-check text-success me-2"></i>한국어 교육
                             </div>
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-success me-2"></i>Online Tracking
+                                <i class="fa fa-check text-success me-2"></i>태권도 수업
                             </div>
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-success me-2"></i>Afordable Fee 
+                                <i class="fa fa-check text-success me-2"></i>전학년 수업 커리큘럼
                             </div>
                             <div class="col-sm-6">
-                                <i class="fa fa-check text-success me-2"></i>Best Trainers
+                                <i class="fa fa-check text-success me-2"></i>기독교 학교
                             </div>
                         </div>
                         <div class="row g-4">
@@ -144,7 +148,7 @@
                                     <span class="flex-shrink-0 btn-square bg-success">
                                         <i class="fa fa-phone-alt text-white"></i>
                                     </span>
-                                    <span class="px-3">+012 345 6789</span>
+                                    <span class="px-3">+070-7562-5655</span>
                                 </a>
                             </div>
                         </div>
@@ -167,8 +171,8 @@
                                 <i class="fa fa-school text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5>Hosanna school is good </h5>
-                                <span>Because hasanna school is good</span>
+                                <h5>태권도 국가선수 00명 배출 </h5>
+                                <span>학교 정규 수업 과정 중 태권도 수업이 있으며 태권도 전문가의 수업으로 많은 태권도 국가대표 선수들을 베출했습니다<div class=""></div></span>
                             </div>
                         </div>
                     </div>
@@ -180,8 +184,8 @@
                                 <i class="fa fa-users text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5>National Instructor</h5>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span>
+                                <h5>명문 대학교 배출</h5>
+                                <span>졸업생 9기까지 현재 어느 학교에 몇 명, 어느 학교에 몇 명을 배출했습니다. 실력이 있는 교사들의 실력과 우수한 학생들의 열띤 공부로 수많은 학생들을 배출했습니다.</span>
                             </div>
                         </div>
                     </div>
@@ -193,8 +197,8 @@
                                 <i class="fa fa-school text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5>Get licence</h5>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span>
+                                <h5>기독교 학교</h5>
+                                <span>캄보디아 호산나 학교는 기독교학교로 매주 학생들이 주도하는 채플을 합니다. 그리고 크리스마스나 행사마다 학생들이 합창을 부르는데 실력이 아주 기가 맥혀요~!</span>
                             </div>
                         </div>
                     </div>
@@ -209,14 +213,14 @@
     <div class="container-xxl courses my-6 py-6 pb-0">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h6 class="text-success text-uppercase mb-2">Tranding Courses</h6>
-                <h1 class="display-6 mb-4">Our Courses Upskill You With Driving Training</h1>
+                <h6 class="text-success text-uppercase mb-2">학교 자랑좀 해볼게요</h6>
+                <h1 class="display-6 mb-4">캄보디아 살라 호산나는 다음과 같은 장점을 가지고 있습니다. </h1>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
                         <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-success text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <div class="d-inline-block bg-success text-white fs-1 py-1 px-4 mb-4">  ㅇ</div>
                             <h5 class="mb-3">Automatic Car Lessons</h5>
                             <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
                             <ol class="breadcrumb justify-content-center mb-0">
