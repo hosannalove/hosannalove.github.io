@@ -29,6 +29,24 @@
 
     <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        /* 센터 라인 스타일 */
+        .center-line {
+            height: 100%; /* 선의 높이를 100%로 설정하여 수직으로 표현 */
+            width: 2px; /* 선의 너비를 지정 */
+            background-color: #000; /* 선의 색상 지정 */
+            display: inline-block; /* 블록 요소를 인라인 블록으로 변경하여 다른 요소와 함께 사용 가능하게 함 */
+        }
+
+         /* 중앙 컨테이너 스타일 */
+         .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -52,58 +70,37 @@
     <!-- Page Header End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-6">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>
-                <h1 class="display-6 mb-4">What Our Clients Say!</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="/img/testimonial-1.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="/img/testimonial-2.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="/img/testimonial-3.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
+    <!-- Center Line Start-->
+
+ <!-- 중앙 라인을 추가한 부분 -->
+ <div class="container-fluid">
+    <div class="row">
+        <!-- 좌측 컨텐츠 -->
+        <div class="col text-center left-content">
+            <!-- 좌측 컨텐츠 내용 -->
+            <img class="w-100" src="/img/index1.jpg" alt="Image">
+        </div>
+
+        <!-- 중앙 라인 -->
+        <div class="col text-center center-container">
+            <div class="center-line"></div>
+        </div>
+
+        <!-- 우측 컨텐츠 -->
+        <div class="col text-left right-content">
+            <!-- 우측 컨텐츠 내용 -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h1 class="text-success display-6 mb-4">2001년</h1>
+                    <h6>08.15</h6>
+                    <h1 class="mb-4">프놈펜의 거대 빈민가 스떵미언쩌이에서 호산나 유치원 시작 (학생40명/교사 3명) (목조건물)</h1>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+</div>
+<!-- 중앙 라인 종료 -->
+
 
     <!-- Copyright -->
     <div id="copy-placeholder"></div>
