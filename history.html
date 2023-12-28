@@ -34,18 +34,20 @@
         /* 센터 라인 스타일 */
         .center-line {
             height: 100%; /* 선의 높이를 100%로 설정하여 수직으로 표현 */
-            width: 2px; /* 선의 너비를 지정 */
-            background-color: #000; /* 선의 색상 지정 */
+            width: 1%; /* 중앙선이 차지하는 부분의 너비를 조절합니다. */
+            background-color: #0431fe; /* 선의 색상 지정 */
             display: inline-block; /* 블록 요소를 인라인 블록으로 변경하여 다른 요소와 함께 사용 가능하게 함 */
+            margin: auto; /* 중앙 정렬을 위해 margin을 auto로 설정합니다. */
         }
     
          /* 중앙 컨테이너 스타일 */
          .center-container {
+            height: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-    </style>
+</style>
 
 </head>
 
@@ -69,14 +71,15 @@
     </div>
     <!-- Page Header End -->
 
-
     <!-- Center Line Start-->
 
  <!-- 중앙 라인을 추가한 부분 -->
  <div class="container-fluid">
     <div class="row">
+
         <!-- 좌측 컨텐츠 -->
         <div class="col text-center left-content">
+
             <!-- 좌측 컨텐츠 내용 -->
             <img class="w-100" src="/img/index1.jpg" alt="Image">
             
@@ -134,13 +137,13 @@
         
 
             <!-- 중앙 라인 -->
-        <div class="col text-center center-container">
+        <div class="col text-center">
             <div class="center-line"></div>
         </div>
 
-
         <!-- 우측 컨텐츠 -->
         <div class="col text-left right-content">
+
             <!-- 우측 컨텐츠 내용 -->
             <div class="wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
