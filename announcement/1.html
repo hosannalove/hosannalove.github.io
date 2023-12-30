@@ -46,68 +46,11 @@
     </style>
     
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
+        /* 가운데 정렬할 요소의 클래스에 스타일을 적용 */
+        .center-text {
+            text-align: center;
         }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: left;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        tbody tr {
-            border-bottom: 1px solid #ddd;
-        }
-
-        #notice-content {
-            display: none;
-            font-size: 18px;
-        }
-
-        th:first-child {
-            /* '번호' 칸의 너비를 좀 좁게 설정 */
-            width: 10%;
-        }
-
-        th:last-child, td:last-child {
-            /* '제목' 칸의 너비를 좀 넓게 설정 */
-            width: 60%;
-        }
-
-        td {
-            /* 텍스트를 굵게 설정 */
-            font-weight: bold;
-            /* 마우스 커서를 올려놓을 때 파란색으로 설정 */
-            transition: color 0.3s ease;
-        }
-
-        td:hover {
-            color: blue;
-        }
-        
     </style>
-    
 </head>
 
 <body>
@@ -117,54 +60,22 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">학교 활동 사진</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-4">공지사항</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">학교 활동 사진</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">공지사항</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
+    <h1 class="center-text">코이카 봉사단 숭실대 단일팀 '쭘립슈어'의 환경 수업 시작</h1>
     
-   
-    <table border="1">
-        <thead>
-            <tr>
-                <th>번호</th>
-                <th>제목</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr onclick="goToPage('/photo/environment edu.html')">
-                <td>1</td>
-                <td>환경 수업 사진</td>
-            </tr>
-            <tr onclick="goToPage('/photo/X-mas.html')">
-                <td>2</td>
-                <td>성탄절 행사 사진</td>
-            </tr>
-            <tr onclick="goToPage('/photo/happy.html')">
-                <td>3</td>
-                <td>아이들의 행복한 일상 사진</td>
-            </tr>
-            <!-- 추가적인 공지사항 항목들을 필요에 따라 추가할 수 있습니다 -->
-        </tbody>
-    </table>
-
-    <!-- JavaScript 함수 정의 -->
-    <script>
-        function goToPage(pageUrl) {
-            // 클릭한 공지사항의 페이지로 이동
-            window.location.href = pageUrl;
-        }
-    </script>
-
-    <!-- Copyright -->
-    <div id="copy-placeholder"></div>
+        <!-- Copyright -->
+        <div id="copy-placeholder"></div>
 
 
         <!-- Back to Top -->
@@ -191,7 +102,6 @@
            $("#copy-placeholder").load("/base/copy.html");
          });
       </script>
-
 </body>
 
 </html>

@@ -84,6 +84,28 @@
             display: none;
             font-size: 18px;
         }
+
+        th:first-child {
+            /* '번호' 칸의 너비를 좀 좁게 설정 */
+            width: 10%;
+        }
+
+        th:last-child, td:last-child {
+            /* '제목' 칸의 너비를 좀 넓게 설정 */
+            width: 60%;
+        }
+
+        td {
+            /* 텍스트를 굵게 설정 */
+            font-weight: bold;
+            /* 마우스 커서를 올려놓을 때 파란색으로 설정 */
+            transition: color 0.3s ease;
+        }
+
+        td:hover {
+            color: blue;
+        }
+        
     </style>
     
 </head>
@@ -108,59 +130,68 @@
     <!-- Page Header End -->
 
     
-    <table>
+   
+    <table border="1">
         <thead>
             <tr>
-                <th>게시일</th>
+                <th>번호</th>
                 <th>제목</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>2023-01-05</td>
-                <td><a href="#" onclick="showNotice(1)">2023년 1학기 시험 일정 안내</a></td>
+            <tr onclick="goToPage('/announcement/1.html')">
+                <td>1</td>
+                <td>코이카 봉사단 숭실대 단일팀 '쭘립슈어'의 환경 수업 시작</td>
             </tr>
-            <tr>
-                <td>2022-11-20</td>
-                <td><a href="#" onclick="showNotice(2)">2022년 가을학기 졸업식 안내</a></td>
+            <tr onclick="goToPage('/announcement/2.html')">
+                <td>2</td>
+                <td>'호산나학교 X 땅우언 지역 X 쭘립슈어'가 함께하는 환경 인프라 구축</td>
             </tr>
-            <!-- 다른 공지사항들 추가 -->
+            <tr onclick="goToPage('/announcement/3.html')">
+                <td>3</td>
+                <td>크리스마스 공연</td>
+            </tr>
+            <!-- 추가적인 공지사항 항목들을 필요에 따라 추가할 수 있습니다 -->
         </tbody>
     </table>
 
-    <div id="notice-content">
-        <h2 id="notice-title"></h2>
-        <p id="notice-body"></p>
-        <button onclick="hideNotice()">닫기</button>
-    </div>
-
+    <!-- JavaScript 함수 정의 -->
     <script>
-        const notices = [
-            { id: 1, title: "2023년 1학기 시험 일정 안내", content: "2023년 1학기 시험 일정이 다음과 같이 안내됩니다. 확인해 주세요.", date: "2023-01-05" },
-            { id: 2, title: "2022년 가을학기 졸업식 안내", content: "2022년 가을학기 졸업식 일정과 관련 안내사항입니다.", date: "2022-11-20" },
-            // 다른 공지사항들 추가
-        ];
-
-        function showNotice(id) {
-            const notice = notices.find(item => item.id === id);
-
-            if (notice) {
-                document.getElementById("notice-title").innerText = notice.title;
-                document.getElementById("notice-body").innerText = notice.content;
-                document.getElementById("notice-content").style.display = "block";
-
-                // 새 창으로 이동
-                window.open("about:blank").document.body.innerHTML = `
-                    <h2>${notice.title}</h2>
-                    <p>${notice.content}</p>
-                `;
-            }
-        }
-
-        function hideNotice() {
-            document.getElementById("notice-content").style.display = "none";
+        function goToPage(pageUrl) {
+            // 클릭한 공지사항의 페이지로 이동
+            window.location.href = pageUrl;
         }
     </script>
+
+    <!-- Copyright -->
+    <div id="copy-placeholder"></div>
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-success btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assetslib/wow/wow.min.js"></script>
+    <script src="/assetslib/easing/easing.min.js"></script>
+    <script src="/assetslib/waypoints/waypoints.min.js"></script>
+    <script src="/assetslib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+        $(function(){
+          $("#navbar-placeholder").load("/base/navbar.html");
+        });
+      </script>
+
+    <script>
+         $(function(){
+           $("#copy-placeholder").load("/base/copy.html");
+         });
+      </script>
+
 </body>
 
 </html>
