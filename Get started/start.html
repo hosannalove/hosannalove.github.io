@@ -97,25 +97,52 @@
 <!-- Page Header End -->
 
     
-<div class="container">
-    <form id="loginForm" action="/login" method="post">
-        <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Login</button>
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <button type="button" onclick="login()">Login</button>
+        </form>
 
-    <form id="signupForm" action="/signup" method="post">
-        <h2><br>Sign Up</h2>
-        <label for="newUsername">Username:</label>
-        <input type="text" id="newUsername" name="newUsername" required>
-        <label for="newPassword">Password:</label>
-        <input type="password" id="newPassword" name="newPassword" required>
-        <button type="submit">Sign Up</button>
-    </form>
-</div>
+        <!-- Signup Form -->
+        <form id="signupForm">
+            <h2>Sign Up</h2>
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+            <button type="button" onclick="signup()">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            // 클라이언트 측 로그인 로직을 작성
+            // AJAX 요청 또는 다른 방법으로 서버에 로그인 정보 전송
+            console.log("Login button clicked");
+        }
+
+        function signup() {
+            // 클라이언트 측 회원가입 로직을 작성
+            // AJAX 요청 또는 다른 방법으로 서버에 회원가입 정보 전송
+            console.log("Sign Up button clicked");
+        }
+    </script>
+</body>
+</html>
+
 
     <!-- Copyright -->
     <div id="copy-placeholder"></div>
