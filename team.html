@@ -57,11 +57,12 @@
         }
     
         /* Navbar에 대한 스타일 */
-        .navbar {
+        .navbar, h1.special-font {
             font-family: 'SOYOMapleBoldTTF'; /* 위에서 정의한 폰트 패밀리로 변경 */
             font-weight: 700; /* 위에서 정의한 폰트의 굵기를 적용 */
         }
     </style>
+
 
 </head>
 
@@ -86,213 +87,27 @@
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s" style="background-image: url('/img/상단배경.jpg'); background-size: cover; background-position: center;">
     <div class="container text-center">
-        <h1 class="display-4 custom-text-container animated slideInDown mb-4">
+        <h1 class="display-4 custom-text-container animated slideInDown special-font mb-4">
             <span class="custom-text">학교 위치 및 시설</span>
         </h1>
     </div>
 </div>
-<!-- Page Header End -->
+<!-- Page Header End -->    
 
-    <!-- Google map start "don't edit it never" -->
-    <div class="container-xxl py-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 450px;">
-                    <div class="position-relative h-100">
-                        <iframe class="position-relative w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2423.042460674641!2d104.848837!3d11.5650908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951dc20412b6d%3A0xbfbc1d728d68b06c!2sHosanna%20School!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
-                </div>
-    <!-- Google map start "don't edit it never" -->
-    
-    <!-- Google form sripts "don't edit it never"-->
-                                       <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                                        <h6 class="text-success text-uppercase mb-2">Contact Us</h6>
-                                        <h1 class="display-6 mb-4">If You Have Any Query, Please Contact Us</h1>
-                                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.</p>
-                                       <div class="inner-title">
-                                          <h5 class="heading-5">Send Your Message</h5>
-                                       </div>
-                                       <form id="emailForm" class="gform" method="POST" data-email="clothes.yoo@gmail.com" 
-                                             action="https://script.google.com/macros/s/AKfycbyhHtL9t-PaMIo2FYXza8LK6stWFWZWjoZVe0TOuoztolkmcmpbAebm0oo7QVJYuCk/exec">
-                                             <div class="form-row g-3">
-                                             <div class="col-md-12">
-                                                <div style="margin-top: 20px;"></div>
-                                                <div class="form-row">
-                                                    <div class="col-md-12">
-                                                      <div class="form-group">
-                                                        <input type="text" class="form-control border-0 bg-light" id="senderEmail" name="senderEmail" placeholder="Your Email" required>
-                                                    </div>
-                                                   </div>
-                                                </div>
-                                                <div style="margin-top: 20px;"></div>
-                                                <div class="form-row">
-                                                    <div class="col-md-12">
-                                                      <div class="form-group">
-                                                        <input type="text" class="form-control border-0 bg-light" id="senderName" name="senderName"placeholder="Your Name" required>
-                                                     </div>
-                                                   </div>
-                                                </div>
-                                                <div style="margin-top: 20px;"></div>
-                                                <div class="form-row">
-                                                    <div class="col-md-12">
-                                                      <div class="form-group">
-                                                        <input type="text" class="form-control border-0 bg-light" id="name" name="name"placeholder="Subject" required>
-                                                     </div>
-                                                   </div>
-                                                </div>
-                                                <div style="margin-top: 20px;"></div>
-                                                <div class="form-row">
-                                                   <div class="col-md-12">
-                                                      <div class="form-group">
-                                                        <textarea class="form-control border-0 bg-light" id="message" name="message" rows="5" placeholder="Your Message" style="height: 150px"></textarea>
-                                                    </div>
-                                                   </div>
-                                                </div>
-                                                <div style="margin-top: 20px;"></div>
-                                                <script type="text/javascript">
-                                                   (function() {
-                                                      // get all data in form and return object
-                                                      function getFormData(form) {
-                                                         var elements = form.elements;
-                                                         var honeypot;
-                     
-                                                         var fields = Object.keys(elements).filter(function(k) {
-                                                            if (elements[k].name === "honeypot") {
-                                                            honeypot = elements[k].value;
-                                                            return false;
-                                                            }
-                                                            return true;
-                                                         }).map(function(k) {
-                                                            if(elements[k].name !== undefined) {
-                                                            return elements[k].name;
-                                                            // special case for Edge's html collection
-                                                            }else if(elements[k].length > 0){
-                                                            return elements[k].item(0).name;
-                                                            }
-                                                         }).filter(function(item, pos, self) {
-                                                            return self.indexOf(item) == pos && item;
-                                                         });
-                     
-                                                         var formData = {};
-                                                         fields.forEach(function(name){
-                                                            var element = elements[name];
-                                                            
-                                                            // singular form elements just have one value
-                                                            formData[name] = element.value;
-                     
-                                                            // when our element has multiple items, get their values
-                                                            if (element.length) {
-                                                            var data = [];
-                                                            for (var i = 0; i < element.length; i++) {
-                                                               var item = element.item(i);
-                                                               if (item.checked || item.selected) {
-                                                                  data.push(item.value);
-                                                               }
-                                                            }
-                                                            formData[name] = data.join(', ');
-                                                            }
-                                                         });
-                     
-                                                         // add form-specific values into the data
-                                                         formData.formDataNameOrder = JSON.stringify(fields);
-                                                         formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-                                                         formData.formGoogleSendEmail
-                                                            = form.dataset.email || ""; // no email by default
-                     
-                                                         return {data: formData, honeypot: honeypot};
-                                                      }
-                     
-                                                      function handleFormSubmit(event) {  // handles form submit without any jquery
-                                                         event.preventDefault();           // we are submitting via xhr below
-                                                         var form = event.target;
-                                                         var formData = getFormData(form);
-                                                         var data = formData.data;
-                     
-                                                         // If a honeypot field is filled, assume it was done so by a spam bot.
-                                                         if (formData.honeypot) {
-                                                            return false;
-                                                         }
-                     
-                                                         disableAllButtons(form);
-                                                         var url = form.action;
-                                                         var xhr = new XMLHttpRequest();
-                                                         xhr.open('POST', url);
-                                                         // xhr.withCredentials = true;
-                                                         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                                                         xhr.onreadystatechange = function() {
-                                                            if (xhr.readyState === 4 && xhr.status === 200) {
-                                                               form.reset();
-                                                               var formElements = form.querySelector(".form-elements")
-                                                               if (formElements) {
-                                                                  formElements.style.display = "none"; // hide form
-                                                               }
-                                                               var thankYouMessage = form.querySelector(".thankyou_message");
-                                                               if (thankYouMessage) {
-                                                                  thankYouMessage.style.display = "block";
-                                                                  alert("메일 전송에 성공했습니다. 확인 후 회신드리겠습니다.");
-                                                               }
-                                                            }
-                                                         };
-                                                         // url encode form data for sending as post data
-                                                         var encoded = Object.keys(data).map(function(k) {
-                                                            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-                                                         }).join('&');
-                                                         xhr.send(encoded);
-                                                      }
-                                                      
-                                                      function loaded() {
-                                                         // bind to the submit event of our form
-                                                         var forms = document.querySelectorAll("form.gform");
-                                                         for (var i = 0; i < forms.length; i++) {
-                                                            forms[i].addEventListener("submit", handleFormSubmit, false);
-                                                         }
-                                                      };
-                                                      document.addEventListener("DOMContentLoaded", loaded, false);
-                     
-                                                      function disableAllButtons(form) {
-                                                         var buttons = form.querySelectorAll("button");
-                                                         for (var i = 0; i < buttons.length; i++) {
-                                                            buttons[i].disabled = true;
-                                                         }
-                                                      }
-                                                      })();
-                                                </script>
-                                                <div class="form-group m-0">
-                                                   <button id="btnSubmit" class="btn btn-success py-3 px-5">Send Message</button>
-                                                </div>
-                                             </div>
-                                          </div>
-                     
-                                          <div style="display:none" class="thankyou_message">
-                                             <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
-                                          </div>
-                     </form>
-                  </div>
-               </div>
-               <div class="col-md-4 offset-md-1">
-               </div>
-             </div>
-          </article>
-       </div>
-    </div>
-    
-    <!-- Google form sripts "don't edit it never"-->
+<h1 style="text-align: center;">교내 시설</h1>
 
     <div class="container-xxl py-6">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 500px;">
-                        <img class="position-absolute w-100 h-100" src="/img/index1.jpg" alt="" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="/img/team-환경실.jpg" alt="" style="object-fit: cover;">
                     </div>
                 </div>
 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
-                        <h1 class="text-success display-6 mb-4">호산나 학교는 하나님께서 캄보디아 학생들을 위해 세운 학교입니다</h1>
+                        <h1 class="text-success display-6 mb-4">스마트그린실</h1>
                         <p>2001년, 하나님께서는 정순영 선교사님을 통해 호산나 학교를 설립하였습니다. 호산나학교는 캄보디아 이 땅에 하나님께서 캄보디아에 있는 학생들의 질 높은 교육을 받을 수 있게 꾸준히 노력하고 있습니다. </p>
                         <p class="mb-4">지금까지 수많은 선교단체들과 학교에서 받은 후원 덕분에 지금까지 학교의 명맥을 이어가고 있습니다. 지금까지도 호산나 학교는 캄보디아 학생들에게 희망찬 미래를 실현해주어 수많은 인재들을 배출하였습니다. </p>
                         <div class="row g-2 mb-4 pb-2">
@@ -348,6 +163,31 @@
     </div>
     <!-- Page Header End -->
 
+<!-- Contact Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 450px;">
+                <div class="position-relative h-100">
+                    <iframe class="position-relative w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2423.042460674641!2d104.848837!3d11.5650908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951dc20412b6d%3A0xbfbc1d728d68b06c!2sHosanna%20School!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                    frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+                </div>
+            </div>
+            <!-- Google form sripts "don't edit it never"-->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <h6 class="text-success text-uppercase mb-2">Phnom Penh, Phosen Chey</h6>
+                <h1 class="display-6 mb-4">학교 위치</h1>
+                <h6>프놈펜 국제공항에서부터 운전 7분, 도보 42분 소요</h6> 
+                <img src="/img/team-학교약도.png" alt="" style="width: 300px; height: auto;">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Google form sripts "don't edit it never"-->
+<!-- Contact End -->
 
     <!-- Copyright -->
     <div id="copy-placeholder"></div>
