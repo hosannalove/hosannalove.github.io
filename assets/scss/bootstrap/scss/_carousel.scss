@@ -216,14 +216,14 @@
 .carousel-dark {
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    filter: $carousel-dark-control-icon-filter;
+    filter: none !important;
   }
 
   .carousel-indicators [data-bs-target] {
-    background-color: $carousel-dark-indicator-active-bg;
+    background-color: transparent !important;
   }
 
   .carousel-caption {
-    color: $carousel-dark-caption-color;
+    color: $carousel-caption-color !important;
   }
 }
